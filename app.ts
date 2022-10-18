@@ -1,3 +1,5 @@
-import { dayOfYear } from "https://deno.land/std@0.160.0/datetime/mod.ts";
+import { serve } from "https://deno.land/std@0.160.0/http/mod.ts";
 
-console.log(dayOfYear(new Date()))
+const port = 8080
+serve((_req) => new Response("Hello, world!!"), { port: port });
+console.log(`http://localhost:${port}/`)
